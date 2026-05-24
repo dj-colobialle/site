@@ -1,215 +1,238 @@
 /**
-* Template Name: Strategy
-* Template URL: https://bootstrapmade.com/strategy-bootstrap-agency-template/
-* Updated: May 09 2025 with Bootstrap v5.3.6
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
+ * DJ Colobialle — Main JS
+ * Libs: Lenis (smooth scroll), AOS (animations), GLightbox (gallery)
+ */
 
-(function() {
+(function () {
   "use strict";
 
-  /**
-   * Apply .scrolled class to the body as the page is scrolled down
-   */
-  function toggleScrolled() {
-    const selectBody = document.querySelector('body');
-    const selectHeader = document.querySelector('#header');
-    if (!selectHeader.classList.contains('scroll-up-sticky') && !selectHeader.classList.contains('sticky-top') && !selectHeader.classList.contains('fixed-top')) return;
-    window.scrollY > 100 ? selectBody.classList.add('scrolled') : selectBody.classList.remove('scrolled');
-  }
+  /* ─────────────────────────────────────────
+   * Lenis — Smooth Scroll
+   * ───────────────────────────────────────── */
+  let lenis;
 
-  document.addEventListener('scroll', toggleScrolled);
-  window.addEventListener('load', toggleScrolled);
-
-  /**
-   * Mobile nav toggle
-   */
-  const mobileNavToggleBtn = document.querySelector('.mobile-nav-toggle');
-
-  function mobileNavToogle() {
-    document.querySelector('body').classList.toggle('mobile-nav-active');
-    mobileNavToggleBtn.classList.toggle('bi-list');
-    mobileNavToggleBtn.classList.toggle('bi-x');
-  }
-  if (mobileNavToggleBtn) {
-    mobileNavToggleBtn.addEventListener('click', mobileNavToogle);
-  }
-
-  /**
-   * Hide mobile nav on same-page/hash links
-   */
-  document.querySelectorAll('#navmenu a').forEach(navmenu => {
-    navmenu.addEventListener('click', () => {
-      if (document.querySelector('.mobile-nav-active')) {
-        mobileNavToogle();
-      }
+  function initLenis() {
+    lenis = new Lenis({
+      duration: 1.3,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      smooth: true,
+      smoothTouch: false,
     });
 
-  });
-
-  /**
-   * Toggle mobile nav dropdowns
-   */
-  document.querySelectorAll('.navmenu .toggle-dropdown').forEach(navmenu => {
-    navmenu.addEventListener('click', function(e) {
-      e.preventDefault();
-      this.parentNode.classList.toggle('active');
-      this.parentNode.nextElementSibling.classList.toggle('dropdown-active');
-      e.stopImmediatePropagation();
-    });
-  });
-
-  /**
-   * Preloader
-   */
-  const preloader = document.querySelector('#preloader');
-  if (preloader) {
-    window.addEventListener('load', () => {
-      preloader.remove();
-    });
-  }
-
-  /**
-   * Scroll top button
-   */
-  let scrollTop = document.querySelector('.scroll-top');
-
-  function toggleScrollTop() {
-    if (scrollTop) {
-      window.scrollY > 100 ? scrollTop.classList.add('active') : scrollTop.classList.remove('active');
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
     }
-  }
-  scrollTop.addEventListener('click', (e) => {
-    e.preventDefault();
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
-  });
+    requestAnimationFrame(raf);
 
-  window.addEventListener('load', toggleScrollTop);
-  document.addEventListener('scroll', toggleScrollTop);
-
-  /**
-   * Animation on scroll function and init
-   */
-  function aosInit() {
-    AOS.init({
-      duration: 600,
-      easing: 'ease-in-out',
-      once: true,
-      mirror: false
-    });
-  }
-  window.addEventListener('load', aosInit);
-
-  /**
-   * Init swiper sliders
-   */
-  function initSwiper() {
-    document.querySelectorAll(".init-swiper").forEach(function(swiperElement) {
-      let config = JSON.parse(
-        swiperElement.querySelector(".swiper-config").innerHTML.trim()
-      );
-
-      if (swiperElement.classList.contains("swiper-tab")) {
-        initSwiperWithCustomPagination(swiperElement, config);
-      } else {
-        new Swiper(swiperElement, config);
-      }
-    });
-  }
-
-  window.addEventListener("load", initSwiper);
-
-  /**
-   * Initiate glightbox
-   */
-  const glightbox = GLightbox({
-    selector: '.glightbox'
-  });
-
-  /**
-   * Init isotope layout and filters
-   */
-  document.querySelectorAll('.isotope-layout').forEach(function(isotopeItem) {
-    let layout = isotopeItem.getAttribute('data-layout') ?? 'masonry';
-    let filter = isotopeItem.getAttribute('data-default-filter') ?? '*';
-    let sort = isotopeItem.getAttribute('data-sort') ?? 'original-order';
-
-    let initIsotope;
-    imagesLoaded(isotopeItem.querySelector('.isotope-container'), function() {
-      initIsotope = new Isotope(isotopeItem.querySelector('.isotope-container'), {
-        itemSelector: '.isotope-item',
-        layoutMode: layout,
-        filter: filter,
-        sortBy: sort
+    // Anchor links use Lenis scroll
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+      anchor.addEventListener("click", function (e) {
+        const target = document.querySelector(this.getAttribute("href"));
+        if (!target) return;
+        e.preventDefault();
+        lenis.scrollTo(target, { offset: -90, duration: 1.4 });
       });
     });
-
-    isotopeItem.querySelectorAll('.isotope-filters li').forEach(function(filters) {
-      filters.addEventListener('click', function() {
-        isotopeItem.querySelector('.isotope-filters .filter-active').classList.remove('filter-active');
-        this.classList.add('filter-active');
-        initIsotope.arrange({
-          filter: this.getAttribute('data-filter')
-        });
-        if (typeof aosInit === 'function') {
-          aosInit();
-        }
-      }, false);
-    });
-
-  });
-
-  /**
-   * Frequently Asked Questions Toggle
-   */
-  document.querySelectorAll('.faq-item h3, .faq-item .faq-toggle').forEach((faqItem) => {
-    faqItem.addEventListener('click', () => {
-      faqItem.parentNode.classList.toggle('faq-active');
-    });
-  });
-
-  /**
-   * Correct scrolling position upon page load for URLs containing hash links.
-   */
-  window.addEventListener('load', function(e) {
-    if (window.location.hash) {
-      if (document.querySelector(window.location.hash)) {
-        setTimeout(() => {
-          let section = document.querySelector(window.location.hash);
-          let scrollMarginTop = getComputedStyle(section).scrollMarginTop;
-          window.scrollTo({
-            top: section.offsetTop - parseInt(scrollMarginTop),
-            behavior: 'smooth'
-          });
-        }, 100);
-      }
-    }
-  });
-
-  /**
-   * Navmenu Scrollspy
-   */
-  let navmenulinks = document.querySelectorAll('.navmenu a');
-
-  function navmenuScrollspy() {
-    navmenulinks.forEach(navmenulink => {
-      if (!navmenulink.hash) return;
-      let section = document.querySelector(navmenulink.hash);
-      if (!section) return;
-      let position = window.scrollY + 200;
-      if (position >= section.offsetTop && position <= (section.offsetTop + section.offsetHeight)) {
-        document.querySelectorAll('.navmenu a.active').forEach(link => link.classList.remove('active'));
-        navmenulink.classList.add('active');
-      } else {
-        navmenulink.classList.remove('active');
-      }
-    })
   }
-  window.addEventListener('load', navmenuScrollspy);
-  document.addEventListener('scroll', navmenuScrollspy);
 
+  /* ─────────────────────────────────────────
+   * AOS — Animate on Scroll
+   * ───────────────────────────────────────── */
+  function initAOS() {
+    AOS.init({
+      duration: 700,
+      easing: "ease-out-cubic",
+      once: true,
+      offset: 60,
+    });
+  }
+
+  /* ─────────────────────────────────────────
+   * Preloader
+   * ───────────────────────────────────────── */
+  function initPreloader() {
+    const preloader = document.querySelector("#preloader");
+    if (!preloader) return;
+    window.addEventListener("load", () => {
+      setTimeout(() => {
+        preloader.classList.add("hidden");
+        setTimeout(() => preloader.remove(), 700);
+      }, 400);
+    });
+  }
+
+  /* ─────────────────────────────────────────
+   * Header scroll state
+   * ───────────────────────────────────────── */
+  function initHeaderScroll() {
+    const body = document.body;
+    const header = document.querySelector("#header");
+    if (!header) return;
+
+    function update() {
+      window.scrollY > 80
+        ? body.classList.add("scrolled")
+        : body.classList.remove("scrolled");
+    }
+    window.addEventListener("scroll", update, { passive: true });
+    update();
+  }
+
+  /* ─────────────────────────────────────────
+   * Mobile nav toggle
+   * ───────────────────────────────────────── */
+  function initMobileNav() {
+    const btn = document.querySelector(".mobile-nav-toggle");
+    if (!btn) return;
+
+    function toggle() {
+      document.body.classList.toggle("mobile-nav-active");
+      btn.classList.toggle("bi-list");
+      btn.classList.toggle("bi-x");
+    }
+
+    btn.addEventListener("click", toggle);
+
+    document.querySelectorAll("#navmenu a").forEach((link) => {
+      link.addEventListener("click", () => {
+        if (document.body.classList.contains("mobile-nav-active")) toggle();
+      });
+    });
+  }
+
+  /* ─────────────────────────────────────────
+   * Scroll Top button
+   * ───────────────────────────────────────── */
+  function initScrollTop() {
+    const btn = document.querySelector(".scroll-top");
+    if (!btn) return;
+
+    function toggle() {
+      window.scrollY > 200
+        ? btn.classList.add("active")
+        : btn.classList.remove("active");
+    }
+
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      if (lenis) {
+        lenis.scrollTo(0, { duration: 1.4 });
+      } else {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+    });
+
+    window.addEventListener("scroll", toggle, { passive: true });
+    toggle();
+  }
+
+  /* ─────────────────────────────────────────
+   * Navmenu Scrollspy
+   * ───────────────────────────────────────── */
+  function initScrollspy() {
+    const links = document.querySelectorAll(".navmenu a");
+
+    function update() {
+      const pos = window.scrollY + 150;
+      links.forEach((link) => {
+        if (!link.hash) return;
+        const section = document.querySelector(link.hash);
+        if (!section) return;
+        const inView =
+          pos >= section.offsetTop &&
+          pos <= section.offsetTop + section.offsetHeight;
+        link.classList.toggle("active", inView);
+      });
+    }
+
+    window.addEventListener("scroll", update, { passive: true });
+    update();
+  }
+
+  /* ─────────────────────────────────────────
+   * GLightbox — Gallery
+   * ───────────────────────────────────────── */
+  function initGallery() {
+    if (typeof GLightbox !== "undefined") {
+      GLightbox({
+        selector: ".glightbox",
+        touchNavigation: true,
+        loop: true,
+        zoomable: true,
+      });
+    }
+  }
+
+  /* ─────────────────────────────────────────
+   * Hero Particles (canvas)
+   * ───────────────────────────────────────── */
+  function initParticles() {
+    const container = document.getElementById("hero-particles");
+    if (!container) return;
+
+    const canvas = document.createElement("canvas");
+    container.appendChild(canvas);
+    const ctx = canvas.getContext("2d");
+
+    let W, H, particles = [];
+    const COUNT = 55;
+
+    function resize() {
+      W = canvas.width = container.offsetWidth;
+      H = canvas.height = container.offsetHeight;
+    }
+
+    function createParticle() {
+      return {
+        x: Math.random() * W,
+        y: Math.random() * H,
+        r: Math.random() * 1.8 + 0.4,
+        dx: (Math.random() - 0.5) * 0.35,
+        dy: (Math.random() - 0.5) * 0.35,
+        alpha: Math.random() * 0.5 + 0.1,
+      };
+    }
+
+    function init() {
+      resize();
+      particles = Array.from({ length: COUNT }, createParticle);
+    }
+
+    function draw() {
+      ctx.clearRect(0, 0, W, H);
+      particles.forEach((p) => {
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(1, 122, 187, ${p.alpha})`;
+        ctx.fill();
+
+        p.x += p.dx;
+        p.y += p.dy;
+
+        if (p.x < 0 || p.x > W) p.dx *= -1;
+        if (p.y < 0 || p.y > H) p.dy *= -1;
+      });
+      requestAnimationFrame(draw);
+    }
+
+    window.addEventListener("resize", resize);
+    init();
+    draw();
+  }
+
+  /* ─────────────────────────────────────────
+   * Boot
+   * ───────────────────────────────────────── */
+  document.addEventListener("DOMContentLoaded", () => {
+    initPreloader();
+    initLenis();
+    initAOS();
+    initHeaderScroll();
+    initMobileNav();
+    initScrollTop();
+    initScrollspy();
+    initGallery();
+    initParticles();
+  });
 })();

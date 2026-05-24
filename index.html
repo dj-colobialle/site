@@ -1,656 +1,509 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>DJ Artur Colobialle</title>
-
-
-  <meta name="description" content="">
-  <meta name="keywords" content="">
-
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <meta name="description" content="DJ Colobialle — energia, batida e momentos inesquecíveis nas pistas.">
+  <meta name="keywords" content="DJ, Colobialle, Artur Mendes, música, pista, set">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Raleway:wght@300;400;500;600;700;800;900&family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
 
-  <!-- Font Awesome para ícones -->
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Bootstrap -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <!-- GLightbox -->
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
 
-  <!-- Main CSS File -->
+  <!-- Main CSS -->
   <link href="assets/css/main.css" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: Strategy
-  * Template URL: https://bootstrapmade.com/strategy-bootstrap-agency-template/
-  * Updated: May 09 2025 with Bootstrap v5.3.6
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body class="index-page">
 
-  <header id="header" class="header d-flex align-items-center fixed-top">
-    <div
-      class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="preloader-inner">
+      <div class="preloader-ring"></div>
+      <span class="preloader-text">DJ COLOBIALLE</span>
+    </div>
+  </div>
 
+  <!-- Header -->
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
       <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.webp" alt=""> -->
         <h1 class="sitename">DJ Colobialle</h1>
       </a>
-
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="#hero" class="active">Inicio</a></li>
+          <li><a href="#hero" class="active">Início</a></li>
           <li><a href="#about">Sobre o DJ</a></li>
-          <li><a href="#call-to-action">Vídeos</a></li>
+          <li><a href="#videos">Vídeos</a></li>
           <li><a href="#portfolio">Fotos</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
-
     </div>
   </header>
+
 
   <main class="main">
 
     <!-- Hero Section -->
     <section id="hero" class="hero section">
+      <div class="hero-bg">
+        <div class="hero-particles" id="hero-particles"></div>
+        <div class="hero-gradient"></div>
+      </div>
       <div class="container">
-        <div class="row">
-          <div class="col-lg-7 content-col" data-aos="fade-up">
+        <div class="row align-items-center">
+          <div class="col-lg-7 content-col" data-aos="fade-up" data-aos-duration="900">
             <div class="content">
-
+              <div class="hero-badge" data-aos="fade-down" data-aos-delay="100">
+                <span class="badge-dot"></span>
+                <span>Disponível para eventos</span>
+              </div>
               <div class="main-heading">
-                <h1>O Melhor DJ do Brasil </h1>
+                <h1>O Melhor DJ<br><span class="text-accent">do Brasil</span></h1>
               </div>
-
               <div class="divider"></div>
-
               <div class="description">
-                Vem sentir a vibe com Artur Mendes, um DJ que tá chegando pra fazer barulho nas pistas! Cada set é feito
-                pra te fazer dançar, curtir e viver momentos inesquecíveis.
+                Vem sentir a vibe com Artur Mendes, um DJ que tá chegando pra fazer barulho nas pistas! Cada set é feito pra te fazer dançar, curtir e viver momentos inesquecíveis.
               </div>
-
-              <div class="cta-button">
-                <a href="https://www.youtube.com/watch?v=qMk3u31BnIk" class="btn">
+              <div class="cta-group d-flex flex-wrap gap-3">
+                <a href="https://www.youtube.com/watch?v=qMk3u31BnIk" target="_blank" class="btn btn-primary-custom">
+                  <i class="bi bi-play-circle-fill me-2"></i>
                   <span>Ouça o CD Promocional</span>
-                  <i class="bi bi-arrow-right"></i>
+                </a>
+                <a href="#about" class="btn btn-outline-custom">
+                  <span>Conheça o DJ</span>
+                  <i class="bi bi-arrow-down ms-2"></i>
                 </a>
               </div>
             </div>
           </div>
-
-          <div class="col-lg-5" data-aos="zoom-out">
+          <div class="col-lg-5 mt-5 mt-lg-0" data-aos="zoom-out" data-aos-delay="200" data-aos-duration="1000">
             <div class="visual-content">
-              <div class="fluid-shape">
-                <img src="assets/img/artur.jpg" alt="Abstract Fluid Shape" class="fluid-img">
+              <div class="hero-image-wrapper">
+                <div class="hero-glow"></div>
+                <img src="assets/img/artur.jpg" alt="DJ Colobialle" class="hero-img">
+                <div class="hero-ring hero-ring-1"></div>
+                <div class="hero-ring hero-ring-2"></div>
               </div>
-
             </div>
           </div>
         </div>
       </div>
-    </section><!-- /Hero Section -->
-
-
-    <section id="call-to-action" class="call-to-action section">
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="advertise-1 d-flex flex-column flex-lg-row gap-4 align-items-center position-relative">
-
-          <div class="content-left flex-grow-1" data-aos="fade-right" data-aos-delay="200">
-            <h2>A Energia do Melhor DJ em Ação</h2>
-            <p class="my-4">Prepare-se para reviver momentos marcantes e sentir a batida que o elevou ao topo do cenário
-              musical</p>
-          </div>
-
+      <div class="hero-scroll-indicator">
+        <div class="scroll-mouse">
+          <div class="scroll-wheel"></div>
         </div>
-        <div class="container">
-
-          <div class="row">
-            <div class="col-md-4">
-              <iframe width="100%" height="280" src="https://www.youtube.com/embed/5giTE0pwfxI?si=LIvTg-yoCNaRdHHo"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-            <div class="col-md-4">
-              <iframe width="100%" height="280" src="https://www.youtube.com/embed/fXmUIliJfns?si=eDRcLCn32_d8I_Hy"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-            <div class="col-md-4">
-              <iframe width="100%" height="280" src="https://www.youtube.com/embed/dbZycZUN4QQ?si=cGZEgMKFUTvJt5rb"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-
-          </div>
-        </div>
-
-
       </div>
+    </section>
 
-    </section><!-- /Call To Action Section -->
+
+    <!-- Videos Section -->
+    <section id="videos" class="videos section light-background">
+      <div class="container">
+        <div class="section-title" data-aos="fade-up">
+          <h2>Vídeos</h2>
+          <div><span>A Energia em Ação</span></div>
+        </div>
+        <div class="videos-intro text-center mb-5" data-aos="fade-up" data-aos-delay="100">
+          <p>Prepare-se para reviver momentos marcantes e sentir a batida que o elevou ao topo do cenário musical</p>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="video-card">
+              <div class="video-wrapper">
+                <iframe width="100%" height="220" src="https://www.youtube.com/embed/5giTE0pwfxI?si=LIvTg-yoCNaRdHHo"
+                  title="YouTube video player" frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="video-card">
+              <div class="video-wrapper">
+                <iframe width="100%" height="220" src="https://www.youtube.com/embed/fXmUIliJfns?si=eDRcLCn32_d8I_Hy"
+                  title="YouTube video player" frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="video-card">
+              <div class="video-wrapper">
+                <iframe width="100%" height="220" src="https://www.youtube.com/embed/dbZycZUN4QQ?si=cGZEgMKFUTvJt5rb"
+                  title="YouTube video player" frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
 
     <!-- About Section -->
     <section id="about" class="about section">
-
-      <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Sobre</h2>
-        <div><span>Conheça o artista </span> </div>
-      </div><!-- End Section Title -->
-
+        <div><span>Conheça o Artista</span></div>
+      </div>
       <div class="container">
-
         <div class="row gx-5 align-items-center">
-          <div class="col-lg-6" data-aos="fade-right" data-aos-delay="200">
-            <div class="about-image position-relative">
-              <img src="assets/img/artur-3.jpeg" class="img-fluid rounded-4 shadow-sm" alt="About Image" loading="lazy">
-
+          <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
+            <div class="about-image-wrapper">
+              <img src="assets/img/artur-3.jpeg" class="img-fluid about-img" alt="Artur Mendes DJ" loading="lazy">
+              <div class="about-image-accent"></div>
             </div>
           </div>
-
-          <div class="col-lg-6 mt-4 mt-lg-0" data-aos="fade-left" data-aos-delay="300">
+          <div class="col-lg-6 mt-5 mt-lg-0" data-aos="fade-left" data-aos-delay="200">
             <div class="about-content">
               <h2>Quem é Artur Mendes?</h2>
               <p class="lead">Muito mais que som. É energia, é conexão!</p>
-              <p>Sou apaixonado por música, por pista cheia e por ver a galera feliz dançando. Tô começando essa
-                caminhada e quero te levar junto nessa jornada. Bora viver essa vibe!</p>
-              <p>Bora construir essa história juntos, fazer muito barulho, espalhar energia e viver experiências que
-                ficam na memória.</p>
-
-              <h4 class="my-4">Siga DJ Colobialle</h4>
-
-              <div class="social-icons d-flex justify-content-start gap-4">
-
-                <!-- YouTube -->
-                <a href="https://www.youtube.com/@djcolobialle27" target="_blank" aria-label="YouTube">
-                  <i class="fab fa-youtube fa-2x"></i>
-                </a>
-
-                <!-- SoundCloud -->
-                <a href="https://soundcloud.com/artur-mendes-153130615" target="_blank" aria-label="SoundCloud">
-                  <i class="fab fa-soundcloud fa-2x"></i>
-                </a>
-
-                <!-- WhatsApp -->
-                <a href="https://api.whatsapp.com/send/?phone=555581985940244" target="_blank" aria-label="WhatsApp">
-                  <i class="fab fa-whatsapp fa-2x"></i>
-                </a>
-
-                <!-- Instagram -->
-                <a href="https://www.instagram.com/dj__colobialle_27/" target="_blank" aria-label="Instagram">
-                  <i class="fab fa-instagram fa-2x"></i>
-                </a>
-
-                <!-- TikTok -->
-                <a href="https://www.tiktok.com/@djcolobialle27" target="_blank" aria-label="TikTok">
-                  <i class="fab fa-tiktok fa-2x"></i>
-                </a>
-
+              <p>Sou apaixonado por música, por pista cheia e por ver a galera feliz dançando. Tô começando essa caminhada e quero te levar junto nessa jornada. Bora viver essa vibe!</p>
+              <p>Bora construir essa história juntos, fazer muito barulho, espalhar energia e viver experiências que ficam na memória.</p>
+              <div class="about-stats d-flex gap-4 my-4">
+                <div class="stat-item">
+                  <span class="stat-number">100+</span>
+                  <span class="stat-label">Sets tocados</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                  <span class="stat-number">5★</span>
+                  <span class="stat-label">Avaliação</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                  <span class="stat-number">∞</span>
+                  <span class="stat-label">Energia</span>
+                </div>
               </div>
-
-
-
-
+              <h4 class="mb-3">Siga DJ Colobialle</h4>
+              <div class="social-icons d-flex gap-3">
+                <a href="https://www.youtube.com/@djcolobialle27" target="_blank" aria-label="YouTube" class="social-btn">
+                  <i class="fab fa-youtube"></i>
+                </a>
+                <a href="https://soundcloud.com/artur-mendes-153130615" target="_blank" aria-label="SoundCloud" class="social-btn">
+                  <i class="fab fa-soundcloud"></i>
+                </a>
+                <a href="https://api.whatsapp.com/send/?phone=555581985940244" target="_blank" aria-label="WhatsApp" class="social-btn">
+                  <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="https://www.tiktok.com/@djcolobialle27" target="_blank" aria-label="TikTok" class="social-btn">
+                  <i class="fab fa-tiktok"></i>
+                </a>
+              </div>
             </div>
           </div>
         </div>
-
       </div>
+    </section>
 
-    </section><!-- /About Section -->
 
-
-    <section id="call-to-action" class="call-to-action section">
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="advertise-1 d-flex flex-column flex-lg-row gap-4 align-items-center position-relative">
-
-          <div class="content-left flex-grow-1" data-aos="fade-right" data-aos-delay="200">
-            <h2>Novo CD Promocional</h2>
-            <p class="my-4">Este CD promocional é um convite para mergulhar em batidas inovadoras, transições impecáveis
-              e uma atmosfera que só o melhor DJ do planeta pode criar. Não perca a chance de ter a energia contagiante
-              do DJ número um em suas mãos.</p>
-
-            <div class="cta-buttons d-flex flex-wrap gap-3">
-              <a href="#" class="btn btn-primary">Assistir no YouTube</a>
+    <!-- CD Promocional Section -->
+    <section id="cd-promo" class="cd-promo section light-background">
+      <div class="container">
+        <div class="promo-card" data-aos="fade-up" data-aos-duration="800">
+          <div class="row align-items-center g-5">
+            <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
+              <div class="promo-content">
+                <span class="promo-tag">Novo Lançamento</span>
+                <h2>CD Promocional</h2>
+                <p>Este CD promocional é um convite para mergulhar em batidas inovadoras, transições impecáveis e uma atmosfera que só o melhor DJ pode criar. Não perca a chance de sentir essa energia.</p>
+                <a href="https://www.youtube.com/watch?v=qMk3u31BnIk" target="_blank" class="btn btn-primary-custom mt-3">
+                  <i class="bi bi-youtube me-2"></i>
+                  Assistir no YouTube
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
+              <div class="promo-video-wrapper">
+                <iframe id="video-promocional" width="100%" height="300"
+                  src="https://www.youtube.com/embed/qMk3u31BnIk?si=j_b7mw3oZ2zsG9h2"
+                  title="CD Promocional DJ Colobialle" frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              </div>
             </div>
           </div>
-
-          <div class="content-right position-relative" data-aos="fade-left" data-aos-delay="300">
-
-            <iframe id="video-promocional" width="100%" height="280"
-              src="https://www.youtube.com/embed/qMk3u31BnIk?si=j_b7mw3oZ2zsG9h2" title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-          </div>
-
-          <div class="decoration">
-            <div class="circle-1"></div>
-            <div class="circle-2"></div>
-          </div>
-
         </div>
-
       </div>
+    </section>
 
-    </section><!-- /Call To Action Section -->
 
     <!-- Portfolio Section -->
     <section id="portfolio" class="portfolio section">
-
-      <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Galeria de Fotos</h2>
+        <h2>Galeria</h2>
         <div><span>Os Melhores Momentos</span></div>
-      </div><!-- End Section Title -->
+      </div>
+      <div class="container">
+        <div class="row g-3 portfolio-grid">
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="50">
+            <div class="portfolio-item">
+              <img src="assets/img/artur-5.jpeg" class="img-fluid" alt="DJ Colobialle" loading="lazy">
+              <div class="portfolio-overlay">
+                <a href="assets/img/artur-5.jpeg" class="glightbox portfolio-zoom" data-gallery="portfolio-gallery">
+                  <i class="bi bi-arrows-fullscreen"></i>
+                </a>
+              </div>
+            </div>
+          </div>
 
-        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+          <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="portfolio-item">
+              <img src="assets/img/artur-6.jpeg" class="img-fluid" alt="DJ Colobialle" loading="lazy">
+              <div class="portfolio-overlay">
+                <a href="assets/img/artur-6.jpeg" class="glightbox portfolio-zoom" data-gallery="portfolio-gallery">
+                  <i class="bi bi-arrows-fullscreen"></i>
+                </a>
+              </div>
+            </div>
+          </div>
 
-          <div class="row g-4 isotope-container" data-aos="fade-up" data-aos-delay="300">
+          <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="150">
+            <div class="portfolio-item">
+              <img src="assets/img/artur-7.jpeg" class="img-fluid" alt="DJ Colobialle" loading="lazy">
+              <div class="portfolio-overlay">
+                <a href="assets/img/artur-7.jpeg" class="glightbox portfolio-zoom" data-gallery="portfolio-gallery">
+                  <i class="bi bi-arrows-fullscreen"></i>
+                </a>
+              </div>
+            </div>
+          </div>
 
-            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-ui">
-              <article class="portfolio-entry">
-                <figure class="entry-image">
-                  <img src="assets/img/artur-5.jpeg" class="img-fluid" alt="" loading="lazy">
-                  <div class="entry-overlay">
-                    <div class="overlay-content">
-                      <div class="entry-links">
-                        <a href="assets/img/artur-5.jpeg" class="glightbox" data-gallery="portfolio-gallery-ui">
-                          <i class="bi bi-arrows-angle-expand"></i>
-                        </a>
+          <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="portfolio-item">
+              <img src="assets/img/artur-8.jpeg" class="img-fluid" alt="DJ Colobialle" loading="lazy">
+              <div class="portfolio-overlay">
+                <a href="assets/img/artur-8.jpeg" class="glightbox portfolio-zoom" data-gallery="portfolio-gallery">
+                  <i class="bi bi-arrows-fullscreen"></i>
+                </a>
+              </div>
+            </div>
+          </div>
 
-                      </div>
-                    </div>
-                  </div>
-                </figure>
-              </article>
-            </div><!-- End Portfolio Item -->
+          <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="50">
+            <div class="portfolio-item">
+              <img src="assets/img/artur-9.jpeg" class="img-fluid" alt="DJ Colobialle" loading="lazy">
+              <div class="portfolio-overlay">
+                <a href="assets/img/artur-9.jpeg" class="glightbox portfolio-zoom" data-gallery="portfolio-gallery">
+                  <i class="bi bi-arrows-fullscreen"></i>
+                </a>
+              </div>
+            </div>
+          </div>
 
-            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-ui">
-              <article class="portfolio-entry">
-                <figure class="entry-image">
-                  <img src="assets/img/artur-6.jpeg" class="img-fluid" alt="" loading="lazy">
-                  <div class="entry-overlay">
-                    <div class="overlay-content">
-                      <div class="entry-links">
-                        <a href="assets/img/artur-6.jpeg" class="glightbox" data-gallery="portfolio-gallery-ui">
-                          <i class="bi bi-arrows-angle-expand"></i>
-                        </a>
+          <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="portfolio-item">
+              <img src="assets/img/artur-10.jpeg" class="img-fluid" alt="DJ Colobialle" loading="lazy">
+              <div class="portfolio-overlay">
+                <a href="assets/img/artur-10.jpeg" class="glightbox portfolio-zoom" data-gallery="portfolio-gallery">
+                  <i class="bi bi-arrows-fullscreen"></i>
+                </a>
+              </div>
+            </div>
+          </div>
 
-                      </div>
-                    </div>
-                  </div>
-                </figure>
-              </article>
-            </div><!-- End Portfolio Item -->
+          <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="150">
+            <div class="portfolio-item">
+              <img src="assets/img/artur-11.jpeg" class="img-fluid" alt="DJ Colobialle" loading="lazy">
+              <div class="portfolio-overlay">
+                <a href="assets/img/artur-11.jpeg" class="glightbox portfolio-zoom" data-gallery="portfolio-gallery">
+                  <i class="bi bi-arrows-fullscreen"></i>
+                </a>
+              </div>
+            </div>
+          </div>
 
-            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-ui">
-              <article class="portfolio-entry">
-                <figure class="entry-image">
-                  <img src="assets/img/artur-7.jpeg" class="img-fluid" alt="" loading="lazy">
-                  <div class="entry-overlay">
-                    <div class="overlay-content">
-                      <div class="entry-links">
-                        <a href="assets/img/artur-7.jpeg" class="glightbox" data-gallery="portfolio-gallery-ui">
-                          <i class="bi bi-arrows-angle-expand"></i>
-                        </a>
-
-                      </div>
-                    </div>
-                  </div>
-                </figure>
-              </article>
-            </div><!-- End Portfolio Item -->
-
-
-
-            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-ui">
-              <article class="portfolio-entry">
-                <figure class="entry-image">
-                  <img src="assets/img/artur-8.jpeg" class="img-fluid" alt="" loading="lazy">
-                  <div class="entry-overlay">
-                    <div class="overlay-content">
-                      <div class="entry-links">
-                        <a href="assets/img/artur-8.jpeg" class="glightbox" data-gallery="portfolio-gallery-ui">
-                          <i class="bi bi-arrows-angle-expand"></i>
-                        </a>
-
-                      </div>
-                    </div>
-                  </div>
-                </figure>
-              </article>
-            </div><!-- End Portfolio Item -->
-
-
-
-            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-ui">
-              <article class="portfolio-entry">
-                <figure class="entry-image">
-                  <img src="assets/img/artur-9.jpeg" class="img-fluid" alt="" loading="lazy">
-                  <div class="entry-overlay">
-                    <div class="overlay-content">
-                      <div class="entry-links">
-                        <a href="assets/img/artur-9.jpeg" class="glightbox" data-gallery="portfolio-gallery-ui">
-                          <i class="bi bi-arrows-angle-expand"></i>
-                        </a>
-
-                      </div>
-                    </div>
-                  </div>
-                </figure>
-              </article>
-            </div><!-- End Portfolio Item -->
+          <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="portfolio-item">
+              <img src="assets/img/artur-12.jpeg" class="img-fluid" alt="DJ Colobialle" loading="lazy">
+              <div class="portfolio-overlay">
+                <a href="assets/img/artur-12.jpeg" class="glightbox portfolio-zoom" data-gallery="portfolio-gallery">
+                  <i class="bi bi-arrows-fullscreen"></i>
+                </a>
+              </div>
+            </div>
+          </div>
 
 
-            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-ui">
-              <article class="portfolio-entry">
-                <figure class="entry-image">
-                  <img src="assets/img/artur-10.jpeg" class="img-fluid" alt="" loading="lazy">
-                  <div class="entry-overlay">
-                    <div class="overlay-content">
-                      <div class="entry-links">
-                        <a href="assets/img/artur-10.jpeg" class="glightbox" data-gallery="portfolio-gallery-ui">
-                          <i class="bi bi-arrows-angle-expand"></i>
-                        </a>
+          <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="50">
+            <div class="portfolio-item">
+              <img src="assets/img/artur-13.jpeg" class="img-fluid" alt="DJ Colobialle" loading="lazy">
+              <div class="portfolio-overlay">
+                <a href="assets/img/artur-13.jpeg" class="glightbox portfolio-zoom" data-gallery="portfolio-gallery">
+                  <i class="bi bi-arrows-fullscreen"></i>
+                </a>
+              </div>
+            </div>
+          </div>
 
-                      </div>
-                    </div>
-                  </div>
-                </figure>
-              </article>
-            </div><!-- End Portfolio Item -->
+          <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="portfolio-item">
+              <img src="assets/img/artur-14.jpeg" class="img-fluid" alt="DJ Colobialle" loading="lazy">
+              <div class="portfolio-overlay">
+                <a href="assets/img/artur-14.jpeg" class="glightbox portfolio-zoom" data-gallery="portfolio-gallery">
+                  <i class="bi bi-arrows-fullscreen"></i>
+                </a>
+              </div>
+            </div>
+          </div>
 
+          <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="150">
+            <div class="portfolio-item">
+              <img src="assets/img/artur-15.jpeg" class="img-fluid" alt="DJ Colobialle" loading="lazy">
+              <div class="portfolio-overlay">
+                <a href="assets/img/artur-15.jpeg" class="glightbox portfolio-zoom" data-gallery="portfolio-gallery">
+                  <i class="bi bi-arrows-fullscreen"></i>
+                </a>
+              </div>
+            </div>
+          </div>
 
-            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-ui">
-              <article class="portfolio-entry">
-                <figure class="entry-image">
-                  <img src="assets/img/artur-11.jpeg" class="img-fluid" alt="" loading="lazy">
-                  <div class="entry-overlay">
-                    <div class="overlay-content">
-                      <div class="entry-links">
-                        <a href="assets/img/artur-11.jpeg" class="glightbox" data-gallery="portfolio-gallery-ui">
-                          <i class="bi bi-arrows-angle-expand"></i>
-                        </a>
+          <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="portfolio-item">
+              <img src="assets/img/artur-16.jpeg" class="img-fluid" alt="DJ Colobialle" loading="lazy">
+              <div class="portfolio-overlay">
+                <a href="assets/img/artur-16.jpeg" class="glightbox portfolio-zoom" data-gallery="portfolio-gallery">
+                  <i class="bi bi-arrows-fullscreen"></i>
+                </a>
+              </div>
+            </div>
+          </div>
 
-                      </div>
-                    </div>
-                  </div>
-                </figure>
-              </article>
-            </div><!-- End Portfolio Item -->
+          <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="50">
+            <div class="portfolio-item">
+              <img src="assets/img/artur-17.jpeg" class="img-fluid" alt="DJ Colobialle" loading="lazy">
+              <div class="portfolio-overlay">
+                <a href="assets/img/artur-17.jpeg" class="glightbox portfolio-zoom" data-gallery="portfolio-gallery">
+                  <i class="bi bi-arrows-fullscreen"></i>
+                </a>
+              </div>
+            </div>
+          </div>
 
-            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-ui">
-              <article class="portfolio-entry">
-                <figure class="entry-image">
-                  <img src="assets/img/artur-12.jpeg" class="img-fluid" alt="" loading="lazy">
-                  <div class="entry-overlay">
-                    <div class="overlay-content">
-                      <div class="entry-links">
-                        <a href="assets/img/artur-12.jpeg" class="glightbox" data-gallery="portfolio-gallery-ui">
-                          <i class="bi bi-arrows-angle-expand"></i>
-                        </a>
+          <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="portfolio-item">
+              <img src="assets/img/artur-18.jpeg" class="img-fluid" alt="DJ Colobialle" loading="lazy">
+              <div class="portfolio-overlay">
+                <a href="assets/img/artur-18.jpeg" class="glightbox portfolio-zoom" data-gallery="portfolio-gallery">
+                  <i class="bi bi-arrows-fullscreen"></i>
+                </a>
+              </div>
+            </div>
+          </div>
 
-                      </div>
-                    </div>
-                  </div>
-                </figure>
-              </article>
-            </div><!-- End Portfolio Item -->
+          <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="150">
+            <div class="portfolio-item">
+              <img src="assets/img/artur-19.jpeg" class="img-fluid" alt="DJ Colobialle" loading="lazy">
+              <div class="portfolio-overlay">
+                <a href="assets/img/artur-19.jpeg" class="glightbox portfolio-zoom" data-gallery="portfolio-gallery">
+                  <i class="bi bi-arrows-fullscreen"></i>
+                </a>
+              </div>
+            </div>
+          </div>
 
-
-
-            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-ui">
-              <article class="portfolio-entry">
-                <figure class="entry-image">
-                  <img src="assets/img/artur-13.jpeg" class="img-fluid" alt="" loading="lazy">
-                  <div class="entry-overlay">
-                    <div class="overlay-content">
-                      <div class="entry-links">
-                        <a href="assets/img/artur-13.jpeg" class="glightbox" data-gallery="portfolio-gallery-ui">
-                          <i class="bi bi-arrows-angle-expand"></i>
-                        </a>
-
-                      </div>
-                    </div>
-                  </div>
-                </figure>
-              </article>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-ui">
-              <article class="portfolio-entry">
-                <figure class="entry-image">
-                  <img src="assets/img/artur-14.jpeg" class="img-fluid" alt="" loading="lazy">
-                  <div class="entry-overlay">
-                    <div class="overlay-content">
-                      <div class="entry-links">
-                        <a href="assets/img/artur-14.jpeg" class="glightbox" data-gallery="portfolio-gallery-ui">
-                          <i class="bi bi-arrows-angle-expand"></i>
-                        </a>
-
-                      </div>
-                    </div>
-                  </div>
-                </figure>
-              </article>
-            </div><!-- End Portfolio Item -->
-
-
-            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-ui">
-              <article class="portfolio-entry">
-                <figure class="entry-image">
-                  <img src="assets/img/artur-15.jpeg" class="img-fluid" alt="" loading="lazy">
-                  <div class="entry-overlay">
-                    <div class="overlay-content">
-                      <div class="entry-links">
-                        <a href="assets/img/artur-15.jpeg" class="glightbox" data-gallery="portfolio-gallery-ui">
-                          <i class="bi bi-arrows-angle-expand"></i>
-                        </a>
-
-                      </div>
-                    </div>
-                  </div>
-                </figure>
-              </article>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-ui">
-              <article class="portfolio-entry">
-                <figure class="entry-image">
-                  <img src="assets/img/artur-16.jpeg" class="img-fluid" alt="" loading="lazy">
-                  <div class="entry-overlay">
-                    <div class="overlay-content">
-                      <div class="entry-links">
-                        <a href="assets/img/artur-16.jpeg" class="glightbox" data-gallery="portfolio-gallery-ui">
-                          <i class="bi bi-arrows-angle-expand"></i>
-                        </a>
-
-                      </div>
-                    </div>
-                  </div>
-                </figure>
-              </article>
-            </div><!-- End Portfolio Item -->
-
-
-
-            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-ui">
-              <article class="portfolio-entry">
-                <figure class="entry-image">
-                  <img src="assets/img/artur-17.jpeg" class="img-fluid" alt="" loading="lazy">
-                  <div class="entry-overlay">
-                    <div class="overlay-content">
-                      <div class="entry-links">
-                        <a href="assets/img/artur-17.jpeg" class="glightbox" data-gallery="portfolio-gallery-ui">
-                          <i class="bi bi-arrows-angle-expand"></i>
-                        </a>
-
-                      </div>
-                    </div>
-                  </div>
-                </figure>
-              </article>
-            </div><!-- End Portfolio Item -->
-
-
-            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-ui">
-              <article class="portfolio-entry">
-                <figure class="entry-image">
-                  <img src="assets/img/artur-18.jpeg" class="img-fluid" alt="" loading="lazy">
-                  <div class="entry-overlay">
-                    <div class="overlay-content">
-                      <div class="entry-links">
-                        <a href="assets/img/artur-18.jpeg" class="glightbox" data-gallery="portfolio-gallery-ui">
-                          <i class="bi bi-arrows-angle-expand"></i>
-                        </a>
-
-                      </div>
-                    </div>
-                  </div>
-                </figure>
-              </article>
-            </div><!-- End Portfolio Item -->
-
-
-            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-ui">
-              <article class="portfolio-entry">
-                <figure class="entry-image">
-                  <img src="assets/img/artur-19.jpeg" class="img-fluid" alt="" loading="lazy">
-                  <div class="entry-overlay">
-                    <div class="overlay-content">
-                      <div class="entry-links">
-                        <a href="assets/img/artur-19.jpeg" class="glightbox" data-gallery="portfolio-gallery-ui">
-                          <i class="bi bi-arrows-angle-expand"></i>
-                        </a>
-
-                      </div>
-                    </div>
-                  </div>
-                </figure>
-              </article>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-ui">
-              <article class="portfolio-entry">
-                <figure class="entry-image">
-                  <img src="assets/img/artur-20.jpeg" class="img-fluid" alt="" loading="lazy">
-                  <div class="entry-overlay">
-                    <div class="overlay-content">
-                      <div class="entry-links">
-                        <a href="assets/img/artur-20.jpeg" class="glightbox" data-gallery="portfolio-gallery-ui">
-                          <i class="bi bi-arrows-angle-expand"></i>
-                        </a>
-
-                      </div>
-                    </div>
-                  </div>
-                </figure>
-              </article>
-            </div><!-- End Portfolio Item -->
-
-
-
-          </div><!-- End Portfolio Container -->
+          <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="portfolio-item">
+              <img src="assets/img/artur-20.jpeg" class="img-fluid" alt="DJ Colobialle" loading="lazy">
+              <div class="portfolio-overlay">
+                <a href="assets/img/artur-20.jpeg" class="glightbox portfolio-zoom" data-gallery="portfolio-gallery">
+                  <i class="bi bi-arrows-fullscreen"></i>
+                </a>
+              </div>
+            </div>
+          </div>
 
         </div>
-
       </div>
-
-    </section><!-- /Portfolio Section -->
-
-
+    </section>
 
   </main>
 
-  <footer>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="footer-content">
-            <h2>DJ COLOBIALLE</h2>
-            <p>Cada set é feito pra te fazer dançar, curtir e viver momentos inesquecíveis.</p>
-            <div class="social-icons d-flex justify-content-start gap-4">
-  
-              <!-- YouTube -->
-              <a href="https://www.youtube.com/@djcolobialle27" target="_blank" aria-label="YouTube">
-                <i class="fab fa-youtube fa-2x"></i>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row align-items-center justify-content-between g-4">
+          <div class="col-lg-4" data-aos="fade-right">
+            <h2 class="footer-logo">DJ COLOBIALLE</h2>
+            <p class="footer-tagline">Cada set é feito pra te fazer dançar, curtir e viver momentos inesquecíveis.</p>
+          </div>
+          <div class="col-lg-4 text-lg-center" data-aos="fade-up">
+            <nav class="footer-nav">
+              <a href="#hero">Início</a>
+              <a href="#about">Sobre</a>
+              <a href="#videos">Vídeos</a>
+              <a href="#portfolio">Fotos</a>
+            </nav>
+          </div>
+          <div class="col-lg-4 text-lg-end" data-aos="fade-left">
+            <div class="social-icons d-flex gap-3 justify-content-lg-end">
+              <a href="https://www.youtube.com/@djcolobialle27" target="_blank" aria-label="YouTube" class="social-btn">
+                <i class="fab fa-youtube"></i>
               </a>
-  
-              <!-- SoundCloud -->
-              <a href="https://soundcloud.com/artur-mendes-153130615" target="_blank" aria-label="SoundCloud">
-                <i class="fab fa-soundcloud fa-2x"></i>
+              <a href="https://soundcloud.com/artur-mendes-153130615" target="_blank" aria-label="SoundCloud" class="social-btn">
+                <i class="fab fa-soundcloud"></i>
               </a>
-  
-              <!-- WhatsApp -->
-              <a href="https://api.whatsapp.com/send/?phone=555581985940244" target="_blank" aria-label="WhatsApp">
-                <i class="fab fa-whatsapp fa-2x"></i>
+              <a href="https://api.whatsapp.com/send/?phone=555581985940244" target="_blank" aria-label="WhatsApp" class="social-btn">
+                <i class="fab fa-whatsapp"></i>
               </a>
-  
-              <!-- Instagram -->
-              <a href="https://www.instagram.com/dj__colobialle_27/" target="_blank" aria-label="Instagram">
-                <i class="fab fa-instagram fa-2x"></i>
+              <a href="https://www.tiktok.com/@djcolobialle27" target="_blank" aria-label="TikTok" class="social-btn">
+                <i class="fab fa-tiktok"></i>
               </a>
-  
-              <!-- TikTok -->
-              <a href="https://www.tiktok.com/@djcolobialle27" target="_blank" aria-label="TikTok">
-                <i class="fab fa-tiktok fa-2x"></i>
-              </a>
-  
             </div>
           </div>
         </div>
       </div>
     </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2025 DJ Colobialle. Todos os direitos reservados.</p>
+      </div>
+    </div>
   </footer>
 
-
   <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
-      class="bi bi-arrow-up-short"></i></a>
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
+    <i class="bi bi-arrow-up-short"></i>
+  </a>
 
-  <!-- Preloader -->
-  <div id="preloader"></div>
-
-  <!-- Vendor JS Files -->
+  <!-- Vendor JS -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
 
-  <!-- Main JS File -->
+  <!-- AOS -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+  <!-- Lenis Smooth Scroll -->
+  <script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
+
+  <!-- Main JS -->
   <script src="assets/js/main.js"></script>
 
 </body>
-
 </html>
